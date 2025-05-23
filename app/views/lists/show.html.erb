@@ -1,2 +1,6 @@
 <h1><%= @list.name%></h1>
+<%= link_to "add bookmark", new_list_bookmark_path(@list) %>
+<%@list.bookmarks.each do |bookmark|%>
+<li><%= bookmark.comment %></li>
+<%end%>
 <p><%= link_to "Back to list", lists_path %></p>
