@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :lists do
+  root to: "list#index"
+
+  resources :lists, except: [:index] do
     resources :bookmarks, only: [:new, :create, :destroy]
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
