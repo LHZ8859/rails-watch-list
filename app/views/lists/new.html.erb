@@ -1,6 +1,7 @@
 <h1>New list</h1>
 <div><%= simple_form_for [@list] do |f| %>
   <%= f.input :name %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit "Submit"%>
 <% end %>
 <p><%= link_to "Back to list", root_path %></p>
